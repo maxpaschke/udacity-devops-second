@@ -3,15 +3,14 @@
 <TODO: complete this with an overview of your project>
 
 ## Project Plan
-<TODO: Project Plan
+[Trello Board](https://trello.com/b/EwIOnB9G/udacity-devops)
 
-* A link to a Trello board for the project
-* A link to a spreadsheet that includes the original and final project plan>
+[Spreadsheet](./project-management/project-management.xlsx)
 
 ## Instructions
 
-# Github Actions passing
-- Show Screenshot
+* Github Actions passing
+  - Show Screenshot
 
 <TODO:  
 * Architectural Diagram (Shows how key parts of the system work)>
@@ -19,19 +18,20 @@
 <TODO:  Instructions for running the Python project.  How could a user with no context run this project without asking you for any help.  Include screenshots with explicit steps to create that work. Be sure to at least include the following screenshots:
 
 * Setup the cloud shell
-- Open the cloud shell from Azure Portal
-- Select "Bash" as input
-- Configure advanced options
-- Use new fileshare and new storage accounts if you have not created them already.
-- Run the following commands:
-  - `ssh-keygen -t rsa`
-  - `cat /home/odl_user/.ssh/id_rsa.pub`
-  - Copy the output of the `cat` command. It should start with "rsa"
-- Go to [github.com/settings/keys]
-- Add the new SSH Key
+  - Open the cloud shell from Azure Portal
+  - Select "Bash" as input
+  - Configure advanced options
+  - Use new fileshare and new storage accounts if you have not created them already.
+  - Run the following commands:
+    - `ssh-keygen -t rsa`
+    - `cat /home/odl_user/.ssh/id_rsa.pub`
+    - Copy the output of the `cat` command. It should start with "rsa"
+  - Go to [github.com/settings/keys](github.com/settings/keys)
+  - Add the new SSH Key
 
 * Authorize the App Service
-
+    - See the steps in [udacity](https://learn.udacity.com/nanodegrees/nd082/parts/cd1806/lessons/a415f839-37b3-4c7c-9bed-dc9764c4a08d/concepts/12055d15-9bd7-4a38-929f-133d24f64963)
+    - 
 
 * Project running on Azure App Service
 
