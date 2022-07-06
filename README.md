@@ -141,6 +141,7 @@
       python3 —version
       pip —version 
       sudo apt-get install python3.7-distutils
+      sudo apt install python3.7-distutils
       sudo apt-get -y install zip
       # Fix for pylint
       # Shows no output because the Path is not set explicitly
