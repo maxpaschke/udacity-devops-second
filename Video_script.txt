@@ -1,0 +1,20 @@
+Explain what it does
+webservice hosted on azure with full ci cd setup
+the code is hosted on Github
+ci is done via github actions
+cd is done via azure devops
+
+VSCode -> Push
+
+Show Github
+actions
+Go through the different actions
+
+SHow Pipeline
+==> Until last step
+
+cut
+
+Show finished,
+Show Prediction
+Show tailed logs

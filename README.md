@@ -17,6 +17,15 @@
 
 <TODO:  Instructions for running the Python project.  How could a user with no context run this project without asking you for any help.  Include screenshots with explicit steps to create that work. Be sure to at least include the following screenshots:
 
+# How to run it locally
+- Make sure you forfill the following requirements
+    - Python Version `3.7.9`
+    - `Make` is installed
+- Run `make install` to install the dependencies
+- Run the flask webserver with `python app.py`
+- Run example predictions by running `make_prediction.sh`
+
+# Setup in Azure
 * Setup the cloud shell
   - Open the cloud shell from Azure Portal
   - Select "Bash" as input
@@ -155,10 +164,9 @@
       echo $PATH
       which pylint
       ```
-
     - The server should show as online now in the agent pool
 
-* Create the webapp manually so it exists for further modification
+* Create the webapp manually so it exists for further modification by the pipeline
     - Run the following in the cloud shell
     - ``` bash
       # adapt these links to suit your application
@@ -168,7 +176,6 @@
       az webapp up --name udacityWebApp123467 --resource-group Azuredevops --runtime "PYTHON:3.7"
       ```
     - You can now view the page under [https://udacitywebapp123467.azurewebsites.net/](https://udacitywebapp123467.azurewebsites.net/)
-
 
 * Create a new pipeline and connect it
   - Goto `Pipelines` in the Azure Devops project
@@ -184,36 +191,35 @@
     - Run it with `make_predict_azure_app.sh`
 
 
-
-
 * Project running on Azure App Service
-
+  - TODO: SCREENSHOT 
 * Project cloned into Azure Cloud Shell
-
+   - TODO: SCREENSHOT 
 * Passing tests that are displayed after running the `make all` command from the `Makefile`
-
+   - TODO: SCREENSHOT 
 * Output of a test run
+   - TODO: SCREENSHOT 
 
 * Successful deploy of the project in Azure Pipelines.  [Note the official documentation should be referred to and double checked as you setup CI/CD](https://docs.microsoft.com/en-us/azure/devops/pipelines/ecosystems/python-webapp?view=azure-devops).
+ - TODO: SCREENSHOT 
 
 * Running Azure App Service from Azure Pipelines automatic deployment
 
-* Successful prediction from deployed flask app in Azure Cloud Shell.  [Use this file as a template for the deployed prediction](https://github.com/udacity/nd082-Azure-Cloud-DevOps-Starter-Code/blob/master/C2-AgileDevelopmentwithAzure/project/starter_files/flask-sklearn/make_predict_azure_app.sh).
-The output should look similar to this:
-
-```bash
-udacity@Azure:~$ ./make_predict_azure_app.sh
-Port: 443
-{"prediction":[20.35373177134412]}
-```
+* Successful prediction from deployed flask app in Azure Cloud Shell.
+  - Output of the make_predict_azure_app.sh from the cloud shell:
+  ``` bash
+  odl_user@Azure:~/udacity-devops-second$ ./make_predict_azure_app.sh
+  Port: 443
+  {"prediction":[20.35373177134412]}
+  ```
 
 * Output of streamed log files from deployed application
-
-> 
+  - Logs can be viewed from the cloud shell with `az webapp log tail --name udacityWebApp123467 --resource-group Azuredevops`
 
 ## Enhancements
-
-<TODO: A short description of how to improve the project in the future>
+- Full integration of the CD part into the github side, using less of azure pipelines. It could be possible to reuse the artifacts that get build in github actions to save computing time.
+- Improved testing: Increase the number of local tests but also do end to end (E2E) tests on the deployed webapp as a final testing step.
+- Add further linting and compliance checking applications in github: Improve the compliance of the application to rules and regulations by checking them automatically.
 
 ## Demo 
 
