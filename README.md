@@ -165,7 +165,7 @@
       git clone git@github.com:maxpaschke/udacity-devops-second.git
       cd udacity-devops-second/
       # Provide the web app name as a globally unique value. 
-      az webapp up --name udacityWebApp123467 --resource-group Azuredevops --runtime "PYTHON:3.9"
+      az webapp up --name udacityWebApp123467 --resource-group Azuredevops --runtime "PYTHON:3.7"
       ```
     - You can now view the page under [https://udacitywebapp123467.azurewebsites.net/](https://udacitywebapp123467.azurewebsites.net/)
 
