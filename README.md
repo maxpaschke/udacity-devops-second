@@ -156,6 +156,17 @@
 
     - The server should show as online now in the agent pool
 
+* Create the webapp manually so it exists for further modification
+    - Run the following in the cloud shell
+    - ``` bash
+      # adapt these links to suit your application
+      git clone git@github.com:maxpaschke/udacity-devops-second.git
+      cd udacity-devops-second/
+      # Provide the web app name as a globally unique value. 
+      az webapp up --name udacityWebApp123467 --resource-group Azuredevops --runtime "PYTHON:3.9"
+      ```
+    - You can now view the page under [https://udacitywebapp123467.azurewebsites.net/](https://udacitywebapp123467.azurewebsites.net/)
+
 
 * Create a new pipeline and connect it
   - Goto `Pipelines` in the Azure Devops project
