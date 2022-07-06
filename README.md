@@ -163,8 +163,8 @@
     - In the Connect Wizard Select `Github`
     - Choose your repository
     - Select existing yaml file
-      - Select ``
-  - 
+      - Select `/.azure/azure-pipeline-self-hosted-agent.yml`
+      - Adjust the webapp name to your new name
 
 
 * Project running on Azure App Service
