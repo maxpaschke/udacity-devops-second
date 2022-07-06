@@ -1,0 +1,232 @@
+odl_user@Azure:~$ az webapp log tail --name udacityWebApp123467 --resource-group Azuredevops
+2022-07-06T12:52:32  Welcome, you are now connected to log-streaming service.
+
+Starting Log Tail -n 10 of existing logs ----
+
+/home/LogFiles/__lastCheckTime.txt  (https://udacitywebapp123467.scm.azurewebsites.net/api/vfs/LogFiles/__lastCheckTime.txt)
+07/06/2022 12:30:33
+
+
+/home/LogFiles/kudu/trace/95597d7a1260-053b9af8-8e7b-4acc-bc7a-7763a3e367d7.txt  (https://udacitywebapp123467.scm.azurewebsites.net/api/vfs/LogFiles/kudu/trace/95597d7a1260-053b9af8-8e7b-4acc-bc7a-7763a3e367d7.txt)
+2022-07-06T12:50:52  Startup Request, url: /api/deployments/51657111851053, method: PUT, type: request, pid: 63,1,13, SCM_DO_BUILD_DURING_DEPLOYMENT: True, ScmType: VSTSRM
+
+
+/home/LogFiles/kudu/trace/95597d7a1260-906d9903-554f-4118-b7a0-45f8f85dde17.txt  (https://udacitywebapp123467.scm.azurewebsites.net/api/vfs/LogFiles/kudu/trace/95597d7a1260-906d9903-554f-4118-b7a0-45f8f85dde17.txt)
+2022-07-06T12:51:03    Outgoing response, type: response, statusCode: 404, statusText: NotFound
+
+
+/home/LogFiles/kudu/trace/a759091d8aee-578b8b03-7648-4376-93b6-438d758d8b7e.txt  (https://udacitywebapp123467.scm.azurewebsites.net/api/vfs/LogFiles/kudu/trace/a759091d8aee-578b8b03-7648-4376-93b6-438d758d8b7e.txt)
+2022-07-06T12:31:08  Startup Request, url: /api/zipdeploy?isAsync=true, method: POST, type: request, pid: 65,1,15, ScmType: None, SCM_DO_BUILD_DURING_DEPLOYMENT: True
+
+
+/home/LogFiles/2022_07_06_lw1sdlwk0006FF_default_docker.log  (https://udacitywebapp123467.scm.azurewebsites.net/api/vfs/LogFiles/2022_07_06_lw1sdlwk0006FF_default_docker.log)
+2022-07-06T12:52:07.289787346Z Generating `gunicorn` command for 'app:app'
+2022-07-06T12:52:07.344432207Z Writing output script to '/opt/startup/startup.sh'
+2022-07-06T12:52:07.467904823Z Using packages from virtual environment antenv located at /tmp/8da5f4d5a09e6b5/antenv.
+2022-07-06T12:52:07.468692629Z Updated PYTHONPATH to ':/opt/startup/app_logs:/opt/startup/code_profiler:/tmp/8da5f4d5a09e6b5/antenv/lib/python3.9/site-packages'
+2022-07-06T12:52:09.629354004Z [2022-07-06 12:52:09 +0000] [79] [INFO] Starting gunicorn 20.1.0
+2022-07-06T12:52:09.661055214Z [2022-07-06 12:52:09 +0000] [79] [INFO] Listening at: http://0.0.0.0:8000 (79)
+2022-07-06T12:52:09.664981640Z [2022-07-06 12:52:09 +0000] [79] [INFO] Using worker: sync
+2022-07-06T12:52:09.684413768Z [2022-07-06 12:52:09 +0000] [82] [INFO] Booting worker with pid: 82
+2022-07-06T12:52:25.164252914Z 169.254.129.1 - - [06/Jul/2022:12:52:25 +0000] "GET /robots933456.txt HTTP/1.1" 404 207 "-" "HealthCheck/1.0"
+
+
+
+/home/LogFiles/2022_07_06_lw1sdlwk0006FF_docker.log  (https://udacitywebapp123467.scm.azurewebsites.net/api/vfs/LogFiles/2022_07_06_lw1sdlwk0006FF_docker.log)
+2022-07-06T12:50:44.134Z INFO  - Waiting for response to warmup request for container udacitywebapp123467_3_08ab8fce. Elapsed time = 35.6265318 sec
+2022-07-06T12:51:02.729Z INFO  - Waiting for response to warmup request for container udacitywebapp123467_3_08ab8fce. Elapsed time = 54.2216508 sec
+2022-07-06T12:51:31.807Z INFO  - Container udacitywebapp123467_3_08ab8fce for site udacitywebapp123467 initialized successfully and is ready to serve requests.
+2022-07-06T12:51:31.866Z INFO  - Recycling container because of AppSettingsChange and isMainSite = True
+2022-07-06T12:51:32.509Z INFO  - Starting container for site
+2022-07-06T12:51:32.510Z INFO  - docker run -d --expose=8000 --name udacitywebapp123467_4_018a9d5f -e WEBSITE_SITE_NAME=udacityWebApp123467 -e WEBSITE_AUTH_ENABLED=False -e WEBSITE_ROLE_INSTANCE_ID=0 -e WEBSITE_HOSTNAME=udacitywebapp123467.azurewebsites.net -e WEBSITE_INSTANCE_ID=436d0a3e8aee4d04857cbdc0264e6696b4edee5752c86ca15a79fe0e49dfdf3c -e HTTP_LOGGING_ENABLED=1 -e WEBSITE_USE_DIAGNOSTIC_SERVER=True appsvc/python:3.9_20220315.5  
+
+2022-07-06T12:51:40.646Z INFO  - Initiating warmup request to container udacitywebapp123467_4_018a9d5f for site udacitywebapp123467
+2022-07-06T12:51:56.178Z INFO  - Waiting for response to war
+mup request for container udacitywebapp123467_4_018a9d5f. Elapsed time = 15.5326515 sec
+2022-07-06T12:52:25.165Z INFO  - Container udacitywebapp123467_4_018a9d5f for site udacitywebapp123467 initialized successfully and is ready to serve requests.
+
+
+/home/LogFiles/AppServiceAppLogs_Feature_Installer/startup_0.log  (https://udacitywebapp123467.scm.azurewebsites.net/api/vfs/LogFiles/AppServiceAppLogs_Feature_Installer/startup_0.log)
+2022-07-06 12:37:30,288  [Thread-1  ] [DEBUG] : Did not find any previously bound socket
+2022-07-06 12:37:30,288  [MainThread] [DEBUG] : Initialized AppServiceAppLogging
+2022-07-06 12:37:45,651  [Thread-3  ] [DEBUG] : Waiting for the logs flag to be set
+2022-07-06 12:51:12,181  [MainThread] [DEBUG] : Initializating AppServiceAppLogging 
+2022-07-06 12:51:12,183  [MainThread] [DEBUG] : Initialized AppServiceAppLogging
+2022-07-06 12:51:12,195  [Thread-1  ] [DEBUG] : Did not find any previously bound socket
+2022-07-06 12:52:09,657  [MainThread] [DEBUG] : Initializating AppServiceAppLogging 
+2022-07-06 12:52:09,658  [Thread-1  ] [DEBUG] : Did not find any previously bound socket
+2022-07-06 12:52:09,658  [MainThread] [DEBUG] : Initialized AppServiceAppLogging
+2022-07-06 12:52:24,912  [Thread-3  ] [DEBUG] : Waiting for the logs flag to be set
+
+
+/home/LogFiles/CodeProfiler/436d0a_debug.log  (https://udacitywebapp123467.scm.azurewebsites.net/api/vfs/LogFiles/CodeProfiler/436d0a_debug.log)
+[2022_07_06_12_52_24] [appsvc_profiler.installer] [INFO] Code Profiler Installer is starting up
+[2022_07_06_12_52_24] [appsvc_profiler.installer] [INFO] Cleaning up any existing status file which indicated signal handlers initialized status
+[2022_07_06_12_52_24] [appsvc_profiler.installer] [INFO] Attempting to delete the signal_handler status file for instance id 436d0a3e8aee4d04857cbdc0264e6696b4edee5752c86ca15a79fe0e49dfdf3c
+[2022_07_06_12_52_24] [appsvc_profiler.installer] [INFO] successfully deleted the status file
+[2022_07_06_12_52_24] [appsvc_profiler.installer] [DEBUG] APPSETTING_WEBSITE_ENABLE_DEFAULT_CODE_PROFILER : None
+[2022_07_06_12_52_25] [appsvc_profiler.installer] [INFO] Attempting to install the default code profiler.
+[2022_07_06_12_52_25] [appsvc_profiler.installer] [DEBUG] viztracer would save traces to /tmp/436d0a_profiler_trace.json
+[2022_07_06_12_52_25] [appsvc_profiler.installer] [INFO] Successfully installed code profiler.
+[2022_07_06_12_52_25] [appsvc_profiler.installer] [INFO] Signal Handlers SIGUSR for needed code-profiler have been initialized for gunicorn process on instance 436d0a3e8aee4d04857cbdc0264e6696b4edee5752c86ca15a79fe0e49dfdf3c
+[2022_07_06_12_52_25] [appsvc_profiler.installer] [DEBUG] Code Profiler Installer is exiting as installation is completed
+
+
+Ending Log Tail of existing logs ---
+
+Starting Live Log Stream ---
+2022-07-06T12:50:06.704371493Z 
+
+2022-07-06T12:50:06.704396893Z   _____                               
+
+2022-07-06T12:50:06.704414893Z   /  _  \ __________ _________   ____  
+
+2022-07-06T12:50:06.704420093Z  /  /_\  \___   /  |  \_  __ \_/ __ \ 
+
+2022-07-06T12:50:06.704424993Z /    |    \/    /|  |  /|  | \/\  ___/ 
+
+2022-07-06T12:50:06.704442993Z \____|__  /_____ \____/ |__|    \___  >
+
+2022-07-06T12:50:06.704449193Z         \/      \/                  \/ 
+
+2022-07-06T12:50:06.704453993Z 
+
+2022-07-06T12:50:06.704458393Z A P P   S E R V I C E   O N   L I N U X
+
+2022-07-06T12:50:06.704462793Z 
+
+2022-07-06T12:50:06.704467093Z Documentation: http://aka.ms/webapp-linux
+
+2022-07-06T12:50:06.704471494Z Python 3.9.7
+
+2022-07-06T12:50:06.704475894Z Note: Any data outside '/home' is not persisted
+
+2022-07-06T12:50:07.952405899Z Starting OpenBSD Secure Shell server: sshd.
+
+2022-07-06T12:50:08.037861695Z App Command Line not configured, will attempt auto-detect
+
+2022-07-06T12:50:09.215430808Z Starting periodic command scheduler: cron.
+
+2022-07-06T12:50:09.237929564Z Launching oryx with: create-script -appPath /home/site/wwwroot -output /opt/startup/startup.sh -virtualEnvName antenv -defaultApp /opt/defaultsite
+
+2022-07-06T12:50:09.464047841Z Found build manifest file at '/h
+ome/site/wwwroot/oryx-manifest.toml'. Deserializing it...
+
+2022-07-06T12:50:09.499145786Z Build Operation ID: |VGW44TFg2VM=.8d9f78a_
+
+2022-07-06T12:50:09.509047655Z Oryx Version: 0.2.20220308.4, Commit: c92fa6a2d6fc14dc9646f80e2bb2e393a5cdc258, ReleaseTagName: 20220308.4
+
+2022-07-06T12:50:09.515786202Z Output is compressed. Extracting it...
+
+2022-07-06T12:50:09.526127974Z Extracting '/home/site/wwwroot/output.tar.gz' to directory '/tmp/8da5f4d5a09e6b5'...
+
+2022-07-06T12:51:09.037418645Z App path is set to '/tmp/8da5f4d5a09e6b5'
+
+2022-07-06T12:51:09.111669204Z Detected an app based on Flask
+
+2022-07-06T12:51:09.112663611Z Generating `gunicorn` command for 'app:app'
+
+2022-07-06T12:51:09.176519791Z Writing output script to '/opt/startup/startup.sh'
+
+2022-07-06T12:51:09.751681515Z Using packages from virtual environment antenv located at /tmp/8da5f4d5a09e6b5/antenv.
+
+2022-07-06T12:51:09.768816143Z Updated PYTHONPATH to ':/opt/startup/app_logs:/opt/startup/code_profiler:/tmp/8da5f4d5a09e6b5/antenv/lib/python3.9/site-packages'
+
+2022-07-06T12:51:12.161200734Z [2022-07-06 12:51:12 +0000] [80] [INFO] Starting gunicorn 20.1.0
+
+2022-07-06T12:51:12.185578314Z [2022-07-06 12:51:12 +0000] [80] [INFO] Listening at: http://0.0.0.0:8000 (80)
+
+2022-07-06T12:51:12.189926345Z [2022-07-06 12:51:12 +0000] [80] [INFO] Using worker: sync
+
+2022-07-06T12:51:12.209144787Z [2022-07-06 12:51:12 +0000] [83] [INFO] Booting worker with pid: 83
+
+2022-07-06T12:51:31.808796203Z 169.254.129.1 - - [06/Jul/2022:12:51:31 +0000] "GET /robots933456.txt HTTP/1.1" 404 207 "-" "HealthCheck/1.0"
+
+
+
+2022-07-06T12:51:38.840516029Z 
+
+2022-07-06T12:51:38.840562230Z   _____                               
+
+2022-07-06T12:51:38.840582330Z   /  _  \ __________ _________   ____  
+
+2022-07-06T12:51:38.840587530Z  /  /_\  \___   /  |  \_  __ \_/ __ \ 
+
+2022-07-06T12:51:38.840591530Z /    |    \/    /|  |  /|  | \/\  ___/ 
+
+2022-07-06T12:51:38.840595530Z \____|__  /_____ \____/ |__|    \___  >
+
+2022-07-06T12:51:38.840599930Z         \/      \/                  \/ 
+
+2022-07-06T12:51:38.840603830Z 
+
+2022-07-06T12:51:38.840607530Z A P P   S E R V I C E   O N   L I N U X
+
+2022-07-06T12:51:38.840611230Z 
+
+2022-07-06T12:51:38.840614830Z Documentation: http://aka.ms/webapp-linux
+
+2022-07-06T12:51:38.840618430Z Python 3.9.7
+
+2022-07-06T12:51:38.840622130Z Note: Any data outside '/home' is not persisted
+
+2022-07-06T12:51:40.254236054Z Starting OpenBSD Secure Shell server: sshd.
+
+2022-07-06T12:51:40.342946031Z App Command Line not configured, will attempt auto-detect
+
+2022-07-06T12:51:40.993883534Z Starting periodic command scheduler: cron.
+
+2022-07-06T12:51:40.995430548Z Launching oryx with: create-script -appPath /home/site/wwwroot -output /opt/startup/startup.sh -virtualEnvName antenv -defaultApp /opt/defaultsite
+
+2022-07-06T12:51:41.207362604Z Found build manifest file at '/home/site/wwwroot/oryx-manifest.toml'. Deserializing it...
+
+2022-07-06T12:51:41.212894352Z Build Operation ID: |VGW44TFg2VM=.8d9f78a_
+
+2022-07-06T12:51:41.219851513Z Oryx Version: 0.2.20220308.4, Commit: c92fa6a2d6fc14dc9646f80e2bb2e393a5cdc258, ReleaseTagName: 20220308.4
+
+2022-07-06T12:51:41.220998023Z Output is compressed. Extracting it...
+
+2022-07-06T12:51:41.245612538Z Extracting '/home/site/wwwroot/output.tar.gz' to directory '/tmp/8da5f4d5a09e6b5'...
+
+2022-07-06T12:52:07.218521475Z App path is set to '/tmp/8da5f4d5a09e6b5'
+
+2022-07-06T12:52:07.288812339Z Detected an app based on Flask
+
+2022-07-06T12:52:07.289787346Z Generating `gunicorn` command for 'app:app'
+
+2022-07-06T12:52:07.344432207Z Writing output script to '/opt/startup/startup.sh'
+
+2022-07-06T12:52:07.467904823Z Using packages from virtual environment antenv located at /tmp/8da5f4d5a09e6b5/antenv.
+
+2022-07-06T12:52:07.468692629Z Updated PYTHONPATH to ':/opt/startup/app_logs:/opt/startup/code_profiler:/tmp/8da5f4d5a09e6b5/antenv/lib/python3.9/site-packages'
+
+2022-07-06T12:52:09.629354004Z [2022-07-06 12:52:09 +0000] [79] [INFO] Starting gunicorn 20.1.0
+
+2022-07-06T12:52:09.661055214Z [2022-07-06 12:52:09 +0000] [79] [INFO] Listening at: http:
+//0.0.0.0:8000 (79)
+
+2022-07-06T12:52:09.664981640Z [2022-07-06 12:52:09 +0000] [79] [INFO] Using worker: sync
+
+2022-07-06T12:52:09.684413768Z [2022-07-06 12:52:09 +0000] [82] [INFO] Booting worker with pid: 82
+
+2022-07-06T12:52:25.164252914Z 169.254.129.1 - - [06/Jul/2022:12:52:25 +0000] "GET /robots933456.txt HTTP/1.1" 404 207 "-" "HealthCheck/1.0"
+
+
+
+2022-07-06T12:51:02.729Z INFO  - Waiting for response to warmup request for container udacitywebapp123467_3_08ab8fce. Elapsed time = 54.2216508 sec
+
+2022-07-06T12:51:31.807Z INFO  - Container udacitywebapp123467_3_08ab8fce for site udacitywebapp123467 initialized successfully and is ready to serve requests.
+
+2022-07-06T12:51:31.866Z INFO  - Recycling container because of AppSettingsChange and isMainSite = True
+
+2022-07-06T12:51:32.509Z INFO  - Starting container for site
+
+2022-07-06T12:51:32.510Z INFO  - docker run -d --expose=8000 --name udacitywebapp123467_4_018a9d5f -e WEBSITE_SITE_NAME=udacityWebApp123467 -e WEBSITE_AUTH_ENABLED=False -e WEBSITE_ROLE_INSTANCE_ID=0 -e WEBSITE_HOSTNAME=udacitywebapp123467.azurewebsites.net -e WEBSITE_INSTANCE_ID=436d0a3e8aee4d04857cbdc0264e6696b4edee5752c86ca15a79fe0e49dfdf3c -e HTTP_LOGGING_ENABLED=1 -e WEBSITE_USE_DIAGNOSTIC_SERVER=True appsvc/python:3.9_20220315.5  
+
+
+
+2022-07-06T12:51:40.646Z INFO  - Initiating warmup request to container udacitywebapp123467_4_018a9d5f for site udacitywebapp123467
+
+2022-07-06T12:51:56.178Z INFO  - Waiting for response to warmup request for container udacitywebapp123467_4_018a9d5f. Elapsed time = 15.5326515 sec
+
+2022-07-06T12:52:25.165Z INFO  - Container udacitywebapp123467_4_018a9d5f for site udacitywebapp123467 initialized successfully and is ready to serve requests.

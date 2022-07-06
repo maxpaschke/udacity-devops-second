@@ -142,6 +142,7 @@
       pip —version 
       sudo apt-get install python3.10.4-distutils
       sudo apt-get -y install zip
+      # Fix for pylint
       # Shows no output because the Path is not set explicitly
       which pylint
       pip show --files pylint
@@ -176,6 +177,12 @@
     - Select existing yaml file
       - Select `/.azure/azure-pipeline-self-hosted-agent.yml`
       - Adjust the webapp name to your new name
+
+* Run a prediction from the cloud shell
+    - Allow the file to be executed via `chmod +x make_predict_azure_app.sh`
+    - Run it with `make_predict_azure_app.sh`
+
+
 
 
 * Project running on Azure App Service
