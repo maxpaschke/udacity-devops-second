@@ -134,13 +134,13 @@
       sudo apt update
       sudo apt install software-properties-common
       sudo add-apt-repository ppa:deadsnakes/ppa
-      sudo apt install python3.10.4
-      sudo apt-get install python3.10.4-venv
+      sudo apt-get install python3.7
+      sudo apt-get install python3.7-venv
       sudo apt-get install python3-pip
       sudo apt install python3-pip
       python3 —version
       pip —version 
-      sudo apt-get install python3.10.4-distutils
+      sudo apt-get install python3.7-distutils
       sudo apt-get -y install zip
       # Fix for pylint
       # Shows no output because the Path is not set explicitly
