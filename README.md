@@ -1,3 +1,5 @@
+[![Python application test with Github Actions](https://github.com/maxpaschke/udacity-devops-second/actions/workflows/pythonapp.yml/badge.svg)](https://github.com/maxpaschke/udacity-devops-second/actions/workflows/pythonapp.yml)
+
 # Overview
 This projects hosts a small website with an integrated webservice on azure. The website allows the user to send requests and receive data from a pretrained model of housing price data in Boston. The main goal of the project is to demonstrate a fully workin CI / CD environment with GitHub and Azure pipelines.
 
@@ -219,6 +221,7 @@ test_hello.py::test_hello_subtract PASSED                                       
       # Provide the web app name as a globally unique value. 
       az webapp up --name udacityWebApp123467 --resource-group Azuredevops --runtime "PYTHON:3.7"
       ```
+    - Alternatively you can run the `commands.sh` file.
     - You can now view the page under [https://udacitywebapp123467.azurewebsites.net/](https://udacitywebapp123467.azurewebsites.net/)
 
 * Create a new pipeline and connect it
@@ -234,6 +237,13 @@ test_hello.py::test_hello_subtract PASSED                                       
     - Allow the file to be executed via `chmod +x make_predict_azure_app.sh`
     - Run it with `make_predict_azure_app.sh`
 
+* Run load testing 
+    - Run `locust --host 127.0.0.1:5000` to test against the local server
+    - Run `locust --host https://udacitywebapp123467.azurewebsites.net/` to test against the website
+    - Select the amount of users you want to simulate
+    - Results:
+  ![Load testing](/screenshots/10_load_testing.png?raw=true "Sucessfully deployed with the azure pipeline")
+  ![Load testing](/screenshots/11_load_testing_charts.png?raw=true "Sucessfully deployed with the azure pipeline")
 
 ## Results
 * Passing tests that are displayed after running the `make all` command from the `Makefile`
