@@ -1,5 +1,4 @@
 # Overview
-
 This projects hosts a small website with an integrated webservice on azure. The website allows the user to send requests and receive data from a pretrained model of housing price data in Boston. The main goal of the project is to demonstrate a fully workin CI / CD environment with GitHub and Azure pipelines.
 
 ## Architecture
@@ -268,6 +267,7 @@ test_hello.py::test_hello_subtract PASSED                                       
 - Full integration of the CD part into the github side, using less of azure pipelines. It could be possible to reuse the artifacts that get build in github actions to save computing time.
 - Improved testing: Increase the number of local tests but also do end to end (E2E) tests on the deployed webapp as a final testing step.
 - Add further linting and compliance checking applications in github: Improve the compliance of the application to rules and regulations by checking them automatically.
+- Move to a branching model for feature development
 
 ## Demo 
 You can find the demo on [Youtube](https://youtu.be/MLaFUDRmrRQ). 
