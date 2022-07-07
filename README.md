@@ -1,31 +1,76 @@
 # Overview
 
-<TODO: complete this with an overview of your project>
+This projects hosts a small website with an integrated webservice on azure. The website allows the user to send requests and receive data from a pretrained model of housing price data in Boston. The main goal of the project is to demonstrate a fully workin CI / CD environment with GitHub and Azure pipelines.
+
+## Architecture
+
 
 ## Project Plan
 [Trello Board](https://trello.com/b/EwIOnB9G/udacity-devops)
 
-[Spreadsheet](./project-management/project-management.xlsx)
+A project plan can be found under [Spreadsheet](./project-management/project-management.xlsx).
 
-## Instructions
+# Hello.py
+## How to run it locally
+- Make sure you forfill the following requirements
+    - Python Version `3.7.9`
+    - `Make` is installed
+- Run `make all` to run install, test and lint.
 
-* Github Actions passing
-  - Show Screenshot
+### Local results
+* Passing tests that are displayed after running the `make all` command from the `Makefile`
+  * The `make all` result for hello.py should look something like this:
+``` cmd
+>>make all
+pip install --upgrade pip &&\
+              pip install -r requirements.txt
+Requirement already satisfied: pip in c:\python379\lib\site-packages (22.1.2)
+[...]
+Requirement already satisfied: pyparsing!=3.0.5,>=2.0.2 in c:\python379\lib\site-packages (from packaging->pytest->-r requirements.txt (line 2)) (3.0.9)
+pylint --disable=R,C hello.py
 
-<TODO:  
-* Architectural Diagram (Shows how key parts of the system work)>
+--------------------------------------------------------------------
+Your code has been rated at 10.00/10 (previous run: 10.00/10, +0.00)
 
-<TODO:  Instructions for running the Python project.  How could a user with no context run this project without asking you for any help.  Include screenshots with explicit steps to create that work. Be sure to at least include the following screenshots:
+python -m pytest -vv test_hello.py
+======================================= test session starts ========================================
+platform win32 -- Python 3.7.9, pytest-7.1.2, pluggy-1.0.0 -- C:\Python379\python.exe
+cachedir: .pytest_cache
+rootdir: C:\Workspace\udacity\github\udacity-devops-second\Hello
+collected 1 item                                                                                     
 
-# How to run it locally
+test_hello.py::test_hello_subtract PASSED                                                     [100%]
+
+======================================== 1 passed in 0.02s =========================================
+```
+* Output of a test run
+``` cmd
+>>make test
+python -m pytest -vv test_hello.py
+======================================= test session starts ========================================
+platform win32 -- Python 3.7.9, pytest-7.1.2, pluggy-1.0.0 -- C:\Python379\python.exe
+cachedir: .pytest_cache
+rootdir: C:\Workspace\udacity\github\udacity-devops-second\Hello
+collected 1 item
+
+test_hello.py::test_hello_subtract PASSED                                                     [100%]
+
+======================================== 1 passed in 0.03s =========================================
+  ```
+
+
+
+# Prediction Service
+## How to run it locally
 - Make sure you forfill the following requirements
     - Python Version `3.7.9`
     - `Make` is installed
 - Run `make install` to install the dependencies
 - Run the flask webserver with `python app.py`
-- Run example predictions by running `make_prediction.sh`
+- Run example predictions by running `make_prediction.sh` in another shell
 
-# Setup in Azure
+
+## Setup in Azure
 * Setup the cloud shell
   - Open the cloud shell from Azure Portal
   - Select "Bash" as input
@@ -191,19 +236,20 @@
     - Run it with `make_predict_azure_app.sh`
 
 
-* Project running on Azure App Service
-  - TODO: SCREENSHOT 
-* Project cloned into Azure Cloud Shell
-   - TODO: SCREENSHOT 
+## Results
 * Passing tests that are displayed after running the `make all` command from the `Makefile`
-   - TODO: SCREENSHOT 
-* Output of a test run
-   - TODO: SCREENSHOT 
+   ![Pred Result](/screenshots/2_Run_make_all_pass_tests.png?raw=true "Pass all tests after running make all")
+* Project running on Azure App Service
+  ![Pred Result](/screenshots/7_running_in_the_service.png?raw=true "Running in the cloud service")
+* Project cloned into Azure Cloud Shell
+  ![Pred Result](/screenshots/1_Clone_Into_Cloudshell.png?raw=true "Sucessfully deployed with the azure pipeline")
+* Github actions running
+![Pred Result](/screenshots/6_GH_Success.png?raw=true "Sucessfully run GH actions")
 
-* Successful deploy of the project in Azure Pipelines.  [Note the official documentation should be referred to and double checked as you setup CI/CD](https://docs.microsoft.com/en-us/azure/devops/pipelines/ecosystems/python-webapp?view=azure-devops).
- - TODO: SCREENSHOT 
-
-* Running Azure App Service from Azure Pipelines automatic deployment
+* Successful deploy of the project in Azure Pipelines & Running Azure App Service from Azure Pipelines automatic deployment  [Note the official documentation should be referred to and double checked as you setup CI/CD](https://docs.microsoft.com/en-us/azure/devops/pipelines/ecosystems/python-webapp?view=azure-devops).
+  * See the result here: 
+![Pred Result](/screenshots/4_sucessfull_CD.png?raw=true "Sucessfully deployed with the azure pipeline")
+![Pred Result](/screenshots/9_pipeline_deploy.png?raw=true "Sucessfully deployed with the azure pipeline")
 
 * Successful prediction from deployed flask app in Azure Cloud Shell.
   - Output of the make_predict_azure_app.sh from the cloud shell:
@@ -212,9 +258,11 @@
   Port: 443
   {"prediction":[20.35373177134412]}
   ```
+  ![Pred Result](/screenshots/8_Run_prediction_in_the_shell.png?raw=true "Prediction Result")
 
 * Output of streamed log files from deployed application
   - Logs can be viewed from the cloud shell with `az webapp log tail --name udacityWebApp123467 --resource-group Azuredevops`
+  - For an example see [./example_tailed_logs.txt](./example_tailed_logs.txt)
 
 ## Enhancements
 - Full integration of the CD part into the github side, using less of azure pipelines. It could be possible to reuse the artifacts that get build in github actions to save computing time.
@@ -222,7 +270,7 @@
 - Add further linting and compliance checking applications in github: Improve the compliance of the application to rules and regulations by checking them automatically.
 
 ## Demo 
-
-<TODO: Add link Screencast on YouTube>
+You can find the demo on [Youtube](https://youtu.be/MLaFUDRmrRQ). 
+The demo shows the project running on Azure and one full run of the CI/CD pipeline as well as a prediction run and the active logs.
 
 
