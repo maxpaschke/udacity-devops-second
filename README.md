@@ -3,7 +3,7 @@
 This projects hosts a small website with an integrated webservice on azure. The website allows the user to send requests and receive data from a pretrained model of housing price data in Boston. The main goal of the project is to demonstrate a fully workin CI / CD environment with GitHub and Azure pipelines.
 
 ## Architecture
-![Architecture Diagramm](/project-management/architecture.drawio?raw=true "Architecture diagramm")
+![Architecture Diagramm](/project-management/architecture.svg?raw=true "Architecture diagramm")
 
 ## Project Plan
 [Trello Board](https://trello.com/b/EwIOnB9G/udacity-devops)
