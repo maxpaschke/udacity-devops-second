@@ -241,9 +241,6 @@ test_hello.py::test_hello_subtract PASSED                                       
     - Run `locust --host 127.0.0.1:5000` to test against the local server
     - Run `locust --host https://udacitywebapp123467.azurewebsites.net/` to test against the website
     - Select the amount of users you want to simulate
-    - Results:
-  ![Load testing](/screenshots/10_load_testing.png?raw=true "Sucessfully deployed with the azure pipeline")
-  ![Load testing](/screenshots/11_load_testing_charts.png?raw=true "Sucessfully deployed with the azure pipeline")
 
 ## Results
 * Passing tests that are displayed after running the `make all` command from the `Makefile`
@@ -272,6 +269,11 @@ test_hello.py::test_hello_subtract PASSED                                       
 * Output of streamed log files from deployed application
   - Logs can be viewed from the cloud shell with `az webapp log tail --name udacityWebApp123467 --resource-group Azuredevops`
   - For an example see [./example_tailed_logs.txt](./example_tailed_logs.txt)
+
+* Load testing results
+    - Results:
+  ![Load testing](/screenshots/10_load_testing.png?raw=true "Sucessfully deployed with the azure pipeline")
+  ![Load testing](/screenshots/11_load_testing_charts.png?raw=true "Sucessfully deployed with the azure pipeline")
 
 ## Enhancements
 - Full integration of the CD part into the github side, using less of azure pipelines. It could be possible to reuse the artifacts that get build in github actions to save computing time.
